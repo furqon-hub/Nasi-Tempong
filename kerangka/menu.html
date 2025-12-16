@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kami - Nasi Tempong</title>
+    <link rel="stylesheet" href="/desain/menu.css">
+    <script src="/js/wishlistmenu.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="/images/logos-removebg-preview.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container text-center mt-40">
+        <h2>Menu Andalan</h2>
+        <p class="mb-30">Siapkan lidahmu untuk petualangan rasa yang luar biasa.</p>
+
+        <div class="galeri-grid">
+            <div class="card-menu">
+                <img src="/images/NASI TEMPONG AYAM GORENG KREMES.png" alt="Ayam Goreng">
+                <div class="card-body">
+                    <h4>Nasi Tempong Ayam</h4>
+                    <p class="card-desc">Ayam goreng bumbu kuning + kremesan.</p>
+                    <h3 class="card-price">Rp 15.000</h3>
+                    <button onclick="pesan('Ayam Goreng')" class="btn-pesan">Pesan</button>
+                </div>
+            </div>
+
+            <div class="card-menu">
+                <img src="/images/NASI TEMPONG LELE GORENG.png" alt="Lele Goreng">
+                <div class="card-body">
+                    <h4>Nasi Tempong Lele</h4>
+                    <p class="card-desc">Lele goreng garing sampai ke tulang.</p>
+                    <h3 class="card-price">Rp 12.000</h3>
+                    <button onclick="pesan('Lele Goreng')" class="btn-pesan">Pesan</button>
+                </div>
+            </div>
+
+            <div class="card-menu best-seller">
+                <img src="/images/NASI TEMPONG CUMI BAKAR.png" alt="Cumi Bakar">
+                <div class="card-body">
+                    <span class="badge-favorit">Favorit</span>
+                    <h4>Nasi Tempong Cumi</h4>
+                    <p class="card-desc">Cumi bakar bumbu rujak pedas manis.</p>
+                    <h3 class="card-price">Rp 18.000</h3>
+                    <button onclick="pesan('Cumi Bakar')" class="btn-pesan">Pesan</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="layanan-container">
+            <h3>Layanan Kami</h3>
+            <ul id="layanan-list" class="layanan-grid"></ul>
+        </div>
+
+        <div class="wishlist-section">
+            <h3>📝 Wishlist Menu</h3>
+            <div class="wishlist-form">
+                <input type="text" id="produkInput" placeholder="Ketik nama menu..." class="input-wishlist">
+                <button id="tambahBtn" class="btn-pesan">Tambah</button>
+            </div>
+            <ul id="daftarProduk"></ul>
+        </div>
+    </main>
+
+    <script>
+        function pesan(menu) { alert("Pesanan " + menu + " telah dicatat! Silakan hubungi kasir."); }
+
+        let layanan = ["✅ Gratis Ongkir (Area Kampus)", "✅ Bayar di Tempat (COD)", "✅ Jaminan Sambal Pedas", "✅ Kemasan Higienis"];
+        let listContainer = document.getElementById("layanan-list");
+        layanan.forEach(item => {
+            let li = document.createElement("li"); li.textContent = item;
+            listContainer.appendChild(li);
+        });
+    </script>
+    <footer>
+        <p>&copy; 2025 Nasi Tempong.</p>
+    </footer>
+</body>
+
+</html>

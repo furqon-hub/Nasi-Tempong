@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kontak - Nasi Tempong</title>
+    <link rel="stylesheet" href="/desain/kontak.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html"><img src="/images/logos-removebg-preview.png" alt="Logo"></a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="produk.html">Menu</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container mt-40">
+        <h2 class="text-center">Hubungi Kami</h2>
+        <p class="text-center mb-30">Punya pertanyaan atau saran? Kirim pesan kepada kami.</p>
+
+        <div class="form-box">
+            <form id="formKontak" action="#">
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Nama Anda" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email Anda" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="kategori">Kategori Pesan:</label>
+                    <select id="kategori" name="kategori" class="form-input" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="umum">Umum</option>
+                        <option value="produk">Produk</option>
+                        <option value="kerjasama">Kerja Sama</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan..." class="form-input"
+                        required></textarea>
+                </div>
+                <div class="form-group" style="margin-bottom:18px;">
+                    <input type="checkbox" id="langganan" name="langganan" value="ya">
+                    <label for="langganan" style="display:inline;font-weight:400;margin-left:8px;">Saya ingin menerima
+                        newsletter</label>
+                </div>
+                <button type="submit" class="btn-kirim w-100">Kirim Pesan</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nasi Tempong.</p>
+    </footer>
+    <script src="/js/validasikontak.js"></script>
+</body>
+
+</html>
